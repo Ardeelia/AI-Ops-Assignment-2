@@ -1,0 +1,45 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: email-verifier-job
+  labels:
+    app: email-verifier
+spec:
+  completions: 8
+  parallelism: 4
+  completionMode: Indexed
+  backoffLimit: 4
+  activeDeadlineSeconds: 1800
+  template:
+    metadata:
+      labels:
+        app: email-verifier
+    spec:
+      restartPolicy: Never
+      topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: kubernetes.io/hostname
+        whenUnsatisfiable: DoNotSchedule
+        labelSelector:
+          matchLabels:
+            app: email-verifier
+      containers:
+      - name: worker
+        image: video_test_email_verifier:latest
+        imagePullPolicy: Never
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "128Mi"
+          limits:
+            cpu: "1000m"
+            memory: "256Mi"

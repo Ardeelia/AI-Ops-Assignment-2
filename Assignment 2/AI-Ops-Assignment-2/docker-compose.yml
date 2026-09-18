@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Multi_Stage_Dockerfile
+    container_name: spam_app
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_HOST=cache
+    depends_on:
+      - cache
+    networks:
+      - app-network
+
+  cache:
+    image: redis:7-alpine
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
