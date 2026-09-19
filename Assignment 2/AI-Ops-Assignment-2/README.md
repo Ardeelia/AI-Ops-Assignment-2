@@ -69,4 +69,12 @@ kubectl rollout status deployment/email-classifier-deployment
 
 kubectl rollout history deployment/email-classifier-deployment
 
+AI USE DISCLOSURE 
+
+The following were the uses of AI Tools in my Assignment 
+I made use only of Gemini Flash Lite for asking queries 
+I used it to debug files where i had issues writing such as yaml files and the docker files and used it to understand various pieces of code so that I could code it up by myself.
+I think the tool allowed me to be more confident in my answers and gain an understanding of certain lines of code that would have been tough to understand otherwise. 
+I used the AI Ops Lab Excercises as Base Codes upon which I edited after understanding the codes.
+
 The following commands and instructions will show the changed rollout history
