@@ -1,6 +1,11 @@
 # AI-Ops-Assignment-2
 
-The following are the instructions to run the questions, Each question has its own python notebook of the form Q.ipynb. All these files will need to be pulled to run the commands. Also the writeup and written answers to all the questions are located in the pdf file. The evidence and the demo of the code running can be found in the video link which is in the video link folder of this repository. The AI Readme file is also present in this repository within the same folder.
+The following are the instructions to run the questions, Each question has its own python notebook of the form Q.ipynb. All these files will need to be pulled to run the commands. Also the writeup and written answers to all the questions are located in the pdf file. The evidence and the demo of the code running can be found in the video link which is https://drive.google.com/drive/folders/1Mbh7BXjJqhTd7pzdPDfmYY5NwAG3PJF7?usp=drive_link . The AI Readme file is also present in this repository within the same folder.
+
+Video Link
+
+https://drive.google.com/drive/folders/1Mbh7BXjJqhTd7pzdPDfmYY5NwAG3PJF7?usp=drive_link
+
 
 Q1. These are the commands for Q1
 
